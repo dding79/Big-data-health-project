@@ -78,7 +78,7 @@ if __name__ == "__main__":
     # Train autoencoder
     print("Training Autoencoder...")
     encoder, sequence_ae = create_ae(X_train, X_val, args.ae_learning_rate, constants.LATENT_DIM)
-    early_stop = EarlyStoppings(monitor='val_loss', patience=3)
+    early_stop = EarlyStopping(monitor='val_loss', patience=3)
 
     sequence_ae.fit(X_train, X_train, epochs=constants.ae_epochs, batch_size=constants.BATCH_SIZE, \
         shuffle=True, callbacks=[early_stop], validation_data=(X_val, X_val))
