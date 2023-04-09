@@ -57,7 +57,7 @@ def create_ae(X_train, X_val, learning_rate, latent_dim):
     sequence_ae = Model(inputs, decoded)
     encoder = Model(inputs, encoded)
 
-    sequence_ae.compile(optimizer=Adam(lr=learning_rate), loss='mse')
+    sequence_ae.compile(optimizer=Adam(learning_rate=learning_rate), loss='mse')
 
     return encoder, sequence_ae
 
