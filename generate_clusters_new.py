@@ -87,7 +87,7 @@ if __name__ == "__main__":
         os.makedirs('clustering_models/')
 
     encoder.save("clustering_models/encoder_" + str(args.data_hours))
-    sequence_autoencoder.save("clustering_models/seq_ae_" + str(args.data_hours))
+    sequence_ae.save("clustering_models/seq_ae_" + str(args.data_hours))
     print("Done Training Autoencoder.")
 
     # Encoder predictions
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
     if not os.path.exists('cluster_membership/'):
         os.makedirs('cluster_membership/')
-    np.save('cluster_membership/' + test_clusters.npy, cluster_pred)
+    np.save('cluster_membership/' + 'test_clusters.npy', cluster_pred)
 
 
 
