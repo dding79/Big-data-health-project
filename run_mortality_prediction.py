@@ -1215,10 +1215,14 @@ if __name__ == "__main__":
 
     # Limit GPU usage.
     os.environ["CUDA_VISIBLE_DEVICES"] = FLAGS.gpu_num
-    config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True  # Don't use all GPUs
-    config.allow_soft_placement = True  # Enable manual control
-    K.tensorflow_backend.set_session(tf.Session(config=config))
+#     config = tf.ConfigProto()
+#     config.gpu_options.allow_growth = True  # Don't use all GPUs
+#     config.allow_soft_placement = True  # Enable manual control
+#     K.tensorflow_backend.set_session(tf.Session(config=config))
+    config = tf.compat.v1.ConfigProto()
+    config.gpu_options.allow_growth = True
+    sess = tf.compat.v1.Session(config=config)
+    K.set_session(sess)
 
     # Make folders for the results & models
     for folder in ['results', 'models', 'checkpoints']:
