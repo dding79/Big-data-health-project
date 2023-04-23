@@ -41,7 +41,7 @@ For more information on the arguments required to run each of these files, use t
     ```
 
 #### Models
-1. Run the python run_mortality_prediction.py via the terminal in the folder where this repository is cloned. The model ran can be specified by command line arguments --model_type {GLOBAL, MULTITASK}.
+1. Run the python run_mortality_prediction.py via the terminal in the folder where this repository is cloned. The model ran can be specified by command line arguments --model_type {'GLOBAL', 'MULTITASK'}.
     ```
     python run_mortality_prediction.py
     ```
