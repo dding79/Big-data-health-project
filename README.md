@@ -37,8 +37,7 @@ pickle
 
 #### Pre-processing
 
-1. Run the SAPII & Code_status.ipynb file to create the 'saps.csv' and 'code_status.csv files'. Place the generated files in the 'data/' folder at the top level of this repository.
-
+1. Run the SAPII & Code_status.ipynb file to create the 'saps.csv' and 'code_status.csv files'. Place the generated files in the 'data/' folder at the top level of this repository. The query is sourced from https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii. 
 
 2. Run the preprocess.py file to create the 'X.h5' and 'static.csv' files, which will be outputted into the 'data/' folder using the following command via the terminal in the folder where this repository is cloned. 
 
@@ -55,6 +54,8 @@ pickle
 
 #### Models
 1. Run the python run_mortality_prediction.py via the terminal in the folder where this repository is cloned. The model ran can be specified by command line arguments --model_type {'GLOBAL', 'MULTITASK'}.
+2. Define cohort type by specifying '--cohorts {'careunit', 'custom'}'.Indicates whether to use original cart units or clusters from GMM model for prediction.
+3. Specify cluster file names in argument '--cohort_filepath'.
     ```
     python run_mortality_prediction.py
     ```
