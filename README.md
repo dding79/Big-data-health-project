@@ -18,6 +18,19 @@ For more information on the arguments required to run each of these files, use t
 
 ### Instructions
 
+Python package dependencies:
+```
+os
+sys
+argparse
+numpy
+pandas
+tensorflow
+keras
+sklearn
+pickle
+```
+
 #### Data Download
 
 1. Download MIMIC-III Clinical Database v1.4 from https://physionet.org/content/mimiciii/1.4/ and unzip the folder at the top level of this repository.
@@ -54,3 +67,13 @@ Without any modification, this code assumes that you have the following files in
 2. static.csv: a CSV file containing one row per patient. Should include {'subject_id', 'hadm_id', 'icustay_id', 'gender', 'age', 'ethnicity', 'first_careunit'}.
 3. saps.csv: a CSV file containing one row per patient. Should include {'subject_id', 'hadm_id', 'icustay_id', 'sapsii'}. This data is found in the saps table in MIMIC III.
 4. code_status.csv: a CSV file containing one row per patient. Should include {'subject_id', 'hadm_id', 'icustay_id', 'timecmo_chart', 'timecmo_nursingnote'}. This data is found in the code_status table of MIMIC III.
+
+### References
+
+Original source code:
+- https://github.com/mit-ddig/multitask-patients
+
+Data Preprocessing Reference code: 
+- https://github.com/DLH2022-Team39/multitask-patients
+- https://github.com/MLforHealth/MIMIC_Extract
+- https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii
