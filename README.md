@@ -14,8 +14,6 @@ In this repository, there are four files to run:
 
 4. run_mortality_prediction.py, which contains methods to preprocess data, as well as train and run a predictive model to predict in-hospital mortality after a certain point, given patients' physiological timeseries data. 
 
-For more information on the arguments required to run each of these files, use the --help flag. 
-
 ### Instructions
 
 Python package dependencies:

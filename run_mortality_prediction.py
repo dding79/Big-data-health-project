@@ -37,10 +37,10 @@ np.set_printoptions(threshold=sys.maxsize)
 INDEX_COLS = ['subject_id', 'icustay_id', 'hours_in', 'hadm_id']
 
 # where the X, Y, static raw data is
-data_path = '/Users/whalessandro/Documents/Network_Science/Big data health/Project/'
+data_path = 'data/'
 
 # where you will save the processed data matrices
-save_data_path = '/Users/whalessandro/Documents/Network_Science/Big data health/Project//mortality/'
+save_data_path = 'data/mortality/'
 
 
 def get_args():
