@@ -6,7 +6,7 @@ The code in this repository reproduces the models described in the paper *Learni
 
 In this repository, there are four files to run: 
 
-1. SAPII & Code_status.ipynb, which extracts data from the mimic-iii database to create the code_status.csv and saps.csv files.
+1. SAPII & Code_status.ipynb, which extracts data from the mimic-iii database to create the code_status.csv and saps.csv files and can be used for data exploration.
 
 2. preprocess.py, which pre-processes the data and creates the X.h5 and static.csv files. 
 
@@ -35,7 +35,7 @@ pickle
 
 #### Pre-processing
 
-1. Run the SAPII & Code_status.ipynb file to create the 'saps.csv' and 'code_status.csv files'. Place the generated files in the 'data/' folder at the top level of this repository. The query is sourced from https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii. 
+1. Download the SAPII & Code_status.ipynb file as a .py file to create the 'saps.csv' and 'code_status.csv files'. Place the generated files in the 'data/' folder at the top level of this repository. The query is sourced from https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii. 
 
 2. Run the preprocess.py file to create the 'X.h5' and 'static.csv' files, which will be outputted into the 'data/' folder using the following command via the terminal in the folder where this repository is cloned. 
 
